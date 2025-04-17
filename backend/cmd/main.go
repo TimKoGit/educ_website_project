@@ -9,9 +9,9 @@ import (
 func main() {
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 
-	api := api.NewApi("postgres://postgres:postgres@localhost:5432/programming_educ")
+	api := api.NewApi("postgres://kondrashovti:admin@localhost:5432/programming_educ")
 
-	api.UseCors("http://localhost:8080")
+	api.UseCors("http://130.193.44.85")
 	api.Register()
 	api.Start(":5000")
 	defer api.Close()

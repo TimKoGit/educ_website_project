@@ -61,7 +61,7 @@ export const fetchUncheckedSubmissionsByGroupId = createAsyncThunk(
   'submissions/fetchUncheckedSubmissionsByGroupId',
   async ({ groupid }: { groupid: string }, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:5000/submissions/unchecked_by_groupid/${groupid}`, {withCredentials: true});
+      const response = await axios.get(`http://130.193.44.85:5000/submissions/unchecked_by_groupid/${groupid}`, {withCredentials: true});
       return response.data;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || 'Не удалось получить посылки');
@@ -74,7 +74,7 @@ export const fetchUncheckedSubmissionsByContestId = createAsyncThunk(
   'submissions/fetchUncheckedSubmissionsByContestId',
   async ({ contestid }: { contestid: string }, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:5000/submissions/unchecked_by_contestid/${contestid}`, {withCredentials: true});
+      const response = await axios.get(`http://130.193.44.85:5000/submissions/unchecked_by_contestid/${contestid}`, {withCredentials: true});
       return response.data;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || 'Не удалось получить посылки');
@@ -87,10 +87,10 @@ export const fetchSubmissionById = createAsyncThunk(
   'submissions/fetchSubmissionById',
   async ({submissionid}: {submissionid: string}, { rejectWithValue }) => {
     try {
-      const response_picture = await axios.get(`http://localhost:5000/submissions_picture/${submissionid}`,
+      const response_picture = await axios.get(`http://130.193.44.85:5000/submissions_picture/${submissionid}`,
       {withCredentials: true, responseType: 'blob'});
       const imageUrl = URL.createObjectURL(response_picture.data);
-      const response_details = await axios.get(`http://localhost:5000/submissions_details/${submissionid}`, {
+      const response_details = await axios.get(`http://130.193.44.85:5000/submissions_details/${submissionid}`, {
         withCredentials: true,
       });
       const { studentName, taskName } = response_details.data;
@@ -107,7 +107,7 @@ export const addSubmission = createAsyncThunk(
   'submissions/addSubmission',
   async (newSubmission: { studentName: string; taskid: string; groupid: string }, { rejectWithValue }) => {
     try {
-      const response = await axios.post('http://localhost:5000/submissions', newSubmission);
+      const response = await axios.post('http://130.193.44.85:5000/submissions', newSubmission);
       return response.data;
     } catch (error: any) {
       return rejectWithValue(error.message || 'Не удалось добавить посылку');
@@ -120,7 +120,7 @@ export const acceptSubmission = createAsyncThunk(
   'submissions/acceptSubmission',
   async (submissionId: string, { rejectWithValue }) => {
     try {
-      const response = await axios.patch(`http://localhost:5000/submissions/accept/${submissionId}`, {}, {withCredentials: true});
+      const response = await axios.patch(`http://130.193.44.85:5000/submissions/accept/${submissionId}`, {}, {withCredentials: true});
       return response.data;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || 'Не удалось принять посылку');
@@ -133,7 +133,7 @@ export const declineSubmission = createAsyncThunk(
   'submissions/declineSubmission',
   async (submissionId: string, { rejectWithValue }) => {
     try {
-      const response = await axios.patch(`http://localhost:5000/submissions/decline/${submissionId}`, {}, {withCredentials: true});
+      const response = await axios.patch(`http://130.193.44.85:5000/submissions/decline/${submissionId}`, {}, {withCredentials: true});
       return response.data;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || 'Не удалось отклонить посылку');

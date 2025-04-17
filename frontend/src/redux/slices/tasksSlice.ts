@@ -36,7 +36,7 @@ export const fetchTasksByContestId = createAsyncThunk(
   'tasks/fetchTasksByContestId',
   async (contestid: string, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:5000/tasks/${contestid}`, {withCredentials: true});
+      const response = await axios.get(`http://130.193.44.85:5000/tasks/${contestid}`, {withCredentials: true});
       debugger;
       return response.data as Task[];
     } catch (error: any) {
@@ -50,7 +50,7 @@ export const deleteTask = createAsyncThunk(
   'tasks/deleteTask',
   async (taskid: string, { rejectWithValue }) => {
     try {
-      await axios.delete(`http://localhost:5000/tasks/${taskid}`, {withCredentials: true});
+      await axios.delete(`http://130.193.44.85:5000/tasks/${taskid}`, {withCredentials: true});
       return taskid;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || 'Не удалось удалить задачу');
@@ -63,7 +63,7 @@ export const addTask = createAsyncThunk(
   'tasks/addTask',
   async (newTask: {name: string, url: string, contestid: string}, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`http://localhost:5000/tasks`, newTask, {withCredentials: true});
+      const response = await axios.post(`http://130.193.44.85:5000/tasks`, newTask, {withCredentials: true});
       return response.data as Task;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || 'Не удалось добваить задачу');

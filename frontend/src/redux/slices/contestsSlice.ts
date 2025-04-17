@@ -43,7 +43,7 @@ export const fetchContestsByGroupId = createAsyncThunk(
   'contests/fetchContestsByGroupId',
   async ({ groupid }: { groupid: string }, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:5000/contests_by_groupid?groupid=${groupid}`, {withCredentials: true});
+      const response = await axios.get(`http://130.193.44.85:5000/contests_by_groupid?groupid=${groupid}`, {withCredentials: true});
       return response.data;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.error || 'Не удалось получить контест');
@@ -56,7 +56,7 @@ export const addNewContest = createAsyncThunk(
   'contests/addNewContest',
   async (newContest: { name: string; groupid: string, time: string, duration: string }, { rejectWithValue }) => {
     try {
-      const response = await axios.post('http://localhost:5000/contests', newContest, {withCredentials: true});
+      const response = await axios.post('http://130.193.44.85:5000/contests', newContest, {withCredentials: true});
       return response.data;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || 'Не удалось добавить контест');
@@ -69,7 +69,7 @@ export const fetchContestById = createAsyncThunk(
   'contests/fetchContestById',
   async (contestid: string, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:5000/contests/${contestid}`, {withCredentials: true});
+      const response = await axios.get(`http://130.193.44.85:5000/contests/${contestid}`, {withCredentials: true});
       return response.data as Contest;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || 'Не удалось получить контест');
@@ -82,7 +82,7 @@ export const deleteContest = createAsyncThunk(
   'contests/deleteContest',
   async (contestid: string, { rejectWithValue }) => {
     try {
-      await axios.delete(`http://localhost:5000/contests/${contestid}`, {withCredentials: true});
+      await axios.delete(`http://130.193.44.85:5000/contests/${contestid}`, {withCredentials: true});
       return contestid;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || 'Не удалось удалить контест');

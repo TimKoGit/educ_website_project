@@ -55,7 +55,7 @@ const TaskTable: React.FC<TaskTableProps> = ({ tasks }) => {
       formData.append('file', file);
 
       try {
-        await axios.post(`http://localhost:5000/tasks/${taskId}/upload`, formData, {
+        await axios.post(`http://130.193.44.85:5000/tasks/${taskId}/upload`, formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },

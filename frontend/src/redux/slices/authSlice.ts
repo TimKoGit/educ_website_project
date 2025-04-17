@@ -57,7 +57,7 @@ export const login = createAsyncThunk(
   'auth/login',
   async (credentials: { username: string; password: string }, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:5000/login`, {
+      const response = await axios.get(`http://130.193.44.85:5000/login`, {
         params: {
           username: credentials.username,
           password: credentials.password,
@@ -79,7 +79,7 @@ export const register = createAsyncThunk(
     try {
       debugger;
       const response = await axios.post(
-        'http://localhost:5000/register',
+        'http://130.193.44.85:5000/register',
         null,
         {
           params: {
@@ -105,7 +105,7 @@ export const fetchGroupsByUserId = createAsyncThunk(
   'auth/fetchGroupsByUserId',
   async (_, { rejectWithValue }) => {
     try {
-      const userGroupsResponse = await axios.get('http://localhost:5000/groups', { withCredentials: true });
+      const userGroupsResponse = await axios.get('http://130.193.44.85:5000/groups', { withCredentials: true });
       return userGroupsResponse.data;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.error || 'Не удалось получить группы пользователя');
@@ -118,7 +118,7 @@ export const addNewGroup = createAsyncThunk(
   'groups/addNewGroup',
   async (newGroup: { name: string; code: string }, {rejectWithValue}) => {
     try {
-      const groupResponse = await axios.post('http://localhost:5000/groups', {
+      const groupResponse = await axios.post('http://130.193.44.85:5000/groups', {
         name: newGroup.name,
         code: newGroup.code,
       }, { withCredentials: true });
@@ -134,7 +134,7 @@ export const joinGroupByCode = createAsyncThunk(
   'auth/joinGroupByCode',
   async (groupCode: string, { rejectWithValue }) => {
     try {
-      const joinGroupResponse = await axios.post('http://localhost:5000/join_group', {
+      const joinGroupResponse = await axios.post('http://130.193.44.85:5000/join_group', {
         code: groupCode
       }, { withCredentials: true });
       return joinGroupResponse.data;
@@ -149,7 +149,7 @@ export const deleteGroup = createAsyncThunk(
   'groups/deleteGroup',
   async (groupid: string, { rejectWithValue }) => {
     try {
-      await axios.delete(`http://localhost:5000/groups/${groupid}`, {withCredentials: true});
+      await axios.delete(`http://130.193.44.85:5000/groups/${groupid}`, {withCredentials: true});
       return groupid;
     } catch (error: any) {
       return rejectWithValue(error.response?.data?.message || 'Не удалось удалить группу');
