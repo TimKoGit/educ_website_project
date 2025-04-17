@@ -1,0 +1,46 @@
+.group-join-form {
+  text-align: center;
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.group-join-form h2 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+  
+.group-join-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.group-join-form input {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.group-join-form button {
+  padding: 10px 15px;
+  background-color: #1697e2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.group-join-form button:hover {
+  background-color: #075e91;
+}
+
+.group-join-form form {
+    text-align: center;
+}

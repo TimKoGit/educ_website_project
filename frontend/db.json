@@ -1,0 +1,155 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "dude",
+      "role": "teacher",
+      "password": "admin",
+      "token": "token_admin",
+      "surname": "Ivanov",
+      "firstname": "Ivan"
+    },
+    {
+      "id": "2",
+      "username": "dude2",
+      "role": "student",
+      "password": "admin",
+      "token": "token_admin",
+      "surname": "Ivanov2",
+      "firstname": "Ivan2"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "Noobs",
+      "code": "123"
+    },
+    {
+      "id": "9419",
+      "name": "dddd",
+      "code": "ad"
+    }
+  ],
+  "users_in_groups": [
+    {
+      "userid": "1",
+      "groupid": "1",
+      "id": "e658"
+    },
+    {
+      "id": "aade",
+      "userid": "1",
+      "groupid": "9419"
+    },
+    {
+      "id": "d345",
+      "userid": "2",
+      "groupid": "1"
+    },
+    {
+      "id": "7f98",
+      "userid": "2",
+      "groupid": "9419"
+    }
+  ],
+  "contests": [
+    {
+      "id": "1",
+      "name": "first_name",
+      "time": "123",
+      "duration": "123",
+      "groupid": "1"
+    },
+    {
+      "id": "2",
+      "name": "second_name",
+      "time": "1234",
+      "duration": "1234",
+      "groupid": "1"
+    },
+    {
+      "id": "3",
+      "name": "third_name",
+      "time": "1235",
+      "duration": "1235",
+      "groupid": "2"
+    },
+    {
+      "id": "7911",
+      "name": "Срслштп",
+      "groupid": "1",
+      "time": "2024-12-19T01:15",
+      "duration": "1000"
+    },
+    {
+      "id": "e22e",
+      "name": "tete",
+      "groupid": "1",
+      "time": "2024-12-19T01:00",
+      "duration": "10000"
+    },
+    {
+      "id": "16d2",
+      "name": "asdasd",
+      "groupid": "1",
+      "time": "2024-12-26T01:03",
+      "duration": "10000"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "1",
+      "studentName": "Ivan Ivanov",
+      "userid": "1",
+      "taskid": "1",
+      "taskName": "1",
+      "status": "unchecked",
+      "groupid": "1",
+      "contestid": "1"
+    },
+    {
+      "id": "2",
+      "studentName": "Ivan Ivanov",
+      "userid": "1",
+      "taskid": "2",
+      "taskName": "qweqwe",
+      "status": "unchecked",
+      "groupid": "1",
+      "contestid": "2"
+    }
+  ],
+  "submission_pictures": [
+    {
+      "id": "1",
+      "submissionid": "1",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5xJj2eY0CRT5Wkf-XklUtNd2t2dtJVivThA&s",
+      "studentName": "Hohh",
+      "taskName": "hah",
+      "userid": "1"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "contestid": "1",
+      "name": "firstTa5k",
+      "url": "https://codeforces.com",
+      "status": "Не проверено"
+    },
+    {
+      "id": "25ac",
+      "name": "asdasd",
+      "url": "ddddd",
+      "contestid": "1",
+      "status": "Отклонено"
+    },
+    {
+      "id": "1dff",
+      "name": "okko",
+      "url": "uiouio",
+      "contestid": "2",
+      "status": "Принято"
+    }
+  ]
+}

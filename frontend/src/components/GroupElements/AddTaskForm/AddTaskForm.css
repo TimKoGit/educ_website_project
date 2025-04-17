@@ -1,0 +1,21 @@
+.takNameInput,
+.taskUrlInput {
+width: 100%;
+margin-bottom: 20px;
+}
+
+.takNameInput label,
+.taskUrlInput label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+}
+
+.takNameInput input,
+.taskUrlInput input {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}

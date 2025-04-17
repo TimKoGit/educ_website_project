@@ -1,0 +1,50 @@
+.add-task-form,
+.create-contest-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.add-task-form label,
+.create-contest-form label {
+  font-size: 16px;
+  margin: 10px 0 5px;
+  align-self: flex-start;
+}
+
+.add-task-form input,
+.create-contest-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-task-form button,
+.create-contest-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1697e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-task-form button:hover,
+.create-contest-form button:hover {
+  background-color: #075e91;
+}
+
+.add-task-form .button-container,
+.create-contest-form .button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}

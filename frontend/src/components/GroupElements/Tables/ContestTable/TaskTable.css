@@ -1,0 +1,38 @@
+.clickable-row {
+  cursor: default;
+}
+
+.clickable-row a {
+  color: rgb(22, 151, 226);
+  text-decoration: none;
+}
+
+.clickable-row a:hover {
+  text-decoration: underline;
+}
+
+.upload-button {
+  padding: 6px 12px;
+  background-color: #1697e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  background-color: #075e91;
+}
+
+.delete-button {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}

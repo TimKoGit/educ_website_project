@@ -1,0 +1,14 @@
+.tables {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.tables .contest-table {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.tables .unchecked-submissions {
+  width: 300px;
+}

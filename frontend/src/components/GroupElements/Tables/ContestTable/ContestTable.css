@@ -1,0 +1,36 @@
+.table-container {
+  border-radius: 8px;
+  overflow: hidden;
+  border-collapse: separate;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contest-table-container {
+  width: 70%;
+  margin: 20px;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th {
+  background-color: white;
+  color: black;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-container td {
+  padding: 12px;
+}
+
+.table-container tbody tr:hover {
+  background-color: #f1f1f1;
+}
+.clickable-row {
+  cursor: pointer;
+}
